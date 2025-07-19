@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 540px;
+            height: 540px;
+        }
+
+        td {
+            width: 36px;
+            height: 36px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .green {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blue {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .red {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(180deg);
+        }
+
+        .yellow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(180deg);
+        }
+
+        
+
+        #\31,
+        #\32,
+        #\33,
+        #\34 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #\31 {
+            background-color: #3498db;
+        }
+
+        #\32 {
+            background-color: #e74c3c;
+        }
+
+        #\33 {
+            background-color: #f1c40f;
+        }
+
+        #\34 {
+            background-color: #2ecc71;
+        }
+
+        tr:nth-child(8) td:nth-child(8) {
+            background: conic-gradient(#2ecc71 0% 25%,
+                    #f1c40f 25% 50%,
+                    #3498db 50% 75%,
+                    #e74c3c 75% 100%);
+        }
+
+        /* White box inside each colored area */
+        .white-box {
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            width: 70%;
+            height: 70%;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .circle {
+            width: 20%;
+            height: 20%;
+            background-color: black;
+            border-radius: 50%;
+            margin: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table border="2">
+            <tr>
+                <td id="1" colspan="6" rowspan="6">
+                    <div class="white-box">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </td>
+                <td></td>
+                <td>
+                    <div class="red"><img src="./Images/Red.png" alt="red Arrow" height="30px"> </div>
+                </td>
+                <td></td>
+                <td id="2" colspan="6" rowspan="6">
+                    <div class="white-box">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: #e74c3c;"></td>
+                <td style="background-color: #e74c3c;"><img src="./Images/Star new.png" alt="Star" height="35px"></td>
+            </tr>
+            <tr>
+                <td style="background-color: lightgray;">
+                    <div class="first"><img src="./Images/Star 00.png" alt="Star" height="35px"></div>
+                </td>
+                <td style="background-color: #e74c3c;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: #e74c3c;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: #e74c3c;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: #e74c3c;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: #3498db;">
+                    <div><img src="./Images/Star new.png" alt="Star" height="35px"></div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: #e74c3c;"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: lightgray;">
+                    <div class="second"><img src="./Images/Star 00.png" alt="Star" height="35px"></div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="blue"><img src="./Images/Blue.png" alt="Blue Arrow" height="30px"> </div>
+                </td>
+                <td style="background-color: #3498db;"></td>
+                <td style="background-color: #3498db;"></td>
+                <td style="background-color: #3498db;"></td>
+                <td style="background-color: #3498db;"></td>
+                <td style="background-color: #3498db;"></td>
+                <td style="background-color: #3498db;"></td>
+                <td></td>
+                <td style="background-color: #2ecc71;"></td>
+                <td style="background-color: #2ecc71;"></td>
+                <td style="background-color: #2ecc71;"></td>
+                <td style="background-color: #2ecc71;"></td>
+                <td style="background-color: #2ecc71;"></td>
+                <td style="background-color: #2ecc71;"></td>
+                <td>
+                    <div class="green"><img src="./Images/Green.png" alt="Green Arrow" height="30px"> </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="background-color:lightgray;">
+                    <div class="third"><img src="./Images/Star 00.png" alt="Star" height="35px"></div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: #f1c40f;"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: #2ecc71;">
+                    <div><img src="./Images/Star new.png" alt="Star" height="35px"></div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="3" colspan="6" rowspan="6">
+                    <div class="white-box">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </td>
+                <td></td>
+                <td style="background-color: #f1c40f;"></td>
+                <td></td>
+                <td id="4" colspan="6" rowspan="6">
+                    <div class="white-box">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: #f1c40f;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: #f1c40f;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: #f1c40f;"></td>
+                <td style="background-color: lightgray;">
+                    <div class="fourth"><img src="./Images/Star 00.png" alt="Star" height="35px"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #f1c40f;"><img src="./Images/Star new.png" alt="Star" height="35px"></td>
+                <td style="background-color: #f1c40f;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="yellow"><img src="./Images/Yellow.png" alt="Yellow Arrow" height="30px"></div>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
